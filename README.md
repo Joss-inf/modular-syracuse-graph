@@ -2,7 +2,7 @@
 
 **Status:** Computational draft / awaiting expert validation  
 **Date:** June 2026  
-**Author:** [Ton nom ou pseudo]  
+**Author:** BESSIERE Josselin
 
 ---
 
