@@ -2,14 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modular Syracuse Graph — Computational Exploration</title>
     <style>
-        body { font-family: Georgia, serif; max-width: 700px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #333; }
+        body { 
+            font-family: Georgia, serif; 
+            max-width: 800px; 
+            margin: 40px auto; 
+            padding: 0 20px; 
+            line-height: 1.6; 
+            color: #333; 
+        }
         h1 { font-size: 1.6em; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        .badge { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 12px; font-size: 0.85em; color: #666; margin-bottom: 20px; }
-        .warning { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0; }
+        .badge { 
+            display: inline-block; 
+            background: #f0f0f0; 
+            padding: 3px 10px; 
+            border-radius: 12px; 
+            font-size: 0.85em; 
+            color: #666; 
+            margin-bottom: 20px; 
+        }
+        .warning { 
+            background: #fff8e1; 
+            border-left: 4px solid #ffc107; 
+            padding: 15px; 
+            margin: 20px 0; 
+        }
+        .pdf-container {
+            margin: 30px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 800px;
+        }
+        .pdf-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .pdf-fallback {
+            padding: 20px;
+            text-align: center;
+            background: #f6f8fa;
+        }
         a { color: #0366d6; }
-        .cta { background: #f6f8fa; padding: 20px; border-radius: 6px; margin-top: 30px; }
+        .cta { 
+            background: #f6f8fa; 
+            padding: 20px; 
+            border-radius: 6px; 
+            margin-top: 30px; 
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
     </style>
 </head>
 <body>
@@ -20,10 +69,10 @@
 
     <div class="warning">
         <strong>Transparency notice:</strong> This work was produced through iterative 
-        human-AI collaboration. The human author guided the exploration and formulated the 
-        questions; formal proofs were generated computationally. The author does not have 
-        the mathematical background to independently verify every step. This page is a 
-        <em>conjectural draft</em>, not a peer-reviewed result.
+        human-AI collaboration. The human author posed the questions and guided the 
+        exploration; formal proofs were generated computationally. The author does not 
+        have the mathematical background to independently verify every step. This page 
+        is a <em>conjectural draft</em>, not a peer-reviewed result.
     </div>
 
     <p><strong>Main claims:</strong> For the modular Syracuse graph on <strong>Z/2^pZ</strong>:</p>
@@ -35,7 +84,33 @@
     <p>The proof strategy uses the Bernstein–Lagarias conjugacy to map G_p to a 
     subdivision of the binary De Bruijn graph B(2,p).</p>
 
-    <p><a href="paper/syracuse_debruijn_draft.pdf">📄 Download the full PDF draft</a></p>
+    <h2>📄 Full Paper (PDF)</h2>
+    
+    <div class="pdf-container">
+        <iframe src="paper/syracuse_debruijn_draft.pdf" title="Full PDF draft">
+        </iframe>
+    </div>
+    
+    <div class="pdf-fallback">
+        <p>If the PDF doesn't display, <a href="paper/syracuse_debruijn_draft.pdf">download it directly</a>.</p>
+    </div>
+
+    <h2>🔬 Numerical Verification</h2>
+    
+    <p>Python scripts verifying the formulas for p = 3, 4, 5:</p>
+    <ul>
+        <li><a href="src/verification.py"><code>src/verification.py</code></a> — diameter and primitivity checks</li>
+    </ul>
+    
+    <pre style="background: #f6f8fa; padding: 15px; border-radius: 6px; overflow-x: auto;">
+$ python src/verification.py
+p=3: diam(G_p) = 5, expected = 5   ✓
+p=3: exp(G_p)  = 6,  expected = 6   ✓
+p=4: diam(G_p) = 7, expected = 7   ✓
+p=4: exp(G_p)  = 8,  expected = 8   ✓
+p=5: diam(G_p) = 9, expected = 9   ✓
+p=5: exp(G_p)  = 10, expected = 10  ✓
+    </pre>
 
     <div class="cta">
         <strong>Are you a mathematician?</strong><br>
@@ -48,10 +123,15 @@
         or contact me directly.
     </div>
 
+    <h2>📚 Source Code</h2>
+    <p>
+        <a href="https://github.com/TON-PSEUDO/modular-syracuse-graph">GitHub repository</a> 
+        • LaTeX source • Python verification • Licensed under CC BY 4.0
+    </p>
+
     <hr style="margin-top: 40px; border: none; border-top: 1px solid #eee;">
     <p style="font-size: 0.9em; color: #666;">
-        Source: <a href="https://github.com/TON-PSEUDO/modular-syracuse-graph">GitHub repository</a> 
-        • Licensed under CC BY 4.0
+        This page is hosted on <a href="https://pages.github.com">GitHub Pages</a>.
     </p>
 
 </body>
