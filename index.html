@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modular Syracuse Graph — Computational Exploration</title>
+    <style>
+        body { font-family: Georgia, serif; max-width: 700px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #333; }
+        h1 { font-size: 1.6em; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .badge { display: inline-block; background: #f0f0f0; padding: 3px 10px; border-radius: 12px; font-size: 0.85em; color: #666; margin-bottom: 20px; }
+        .warning { background: #fff8e1; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0; }
+        a { color: #0366d6; }
+        .cta { background: #f6f8fa; padding: 20px; border-radius: 6px; margin-top: 30px; }
+    </style>
+</head>
+<body>
+
+    <span class="badge">Draft • June 2026 • Seeking expert validation</span>
+    
+    <h1>Exact Diameter and Primitivity Exponent of the Modular Syracuse Graph G_p</h1>
+
+    <div class="warning">
+        <strong>Transparency notice:</strong> This work was produced through iterative 
+        human-AI collaboration. The human author guided the exploration and formulated the 
+        questions; formal proofs were generated computationally. The author does not have 
+        the mathematical background to independently verify every step. This page is a 
+        <em>conjectural draft</em>, not a peer-reviewed result.
+    </div>
+
+    <p><strong>Main claims:</strong> For the modular Syracuse graph on <strong>Z/2^pZ</strong>:</p>
+    <ul>
+        <li><strong>Diameter:</strong> diam(G_p) = 2p − 1</li>
+        <li><strong>Primitivity exponent:</strong> exp(G_p) = 2p</li>
+    </ul>
+
+    <p>The proof strategy uses the Bernstein–Lagarias conjugacy to map G_p to a 
+    subdivision of the binary De Bruijn graph B(2,p).</p>
+
+    <p><a href="paper/syracuse_debruijn_draft.pdf">📄 Download the full PDF draft</a></p>
+
+    <div class="cta">
+        <strong>Are you a mathematician?</strong><br>
+        I am looking for feedback on whether these formulas are:
+        <ol>
+            <li>Already known in the literature, or</li>
+            <li>Correct and potentially publishable with expert validation.</li>
+        </ol>
+        Please <a href="https://github.com/TON-PSEUDO/modular-syracuse-graph/issues">open an issue</a> 
+        or contact me directly.
+    </div>
+
+    <hr style="margin-top: 40px; border: none; border-top: 1px solid #eee;">
+    <p style="font-size: 0.9em; color: #666;">
+        Source: <a href="https://github.com/TON-PSEUDO/modular-syracuse-graph">GitHub repository</a> 
+        • Licensed under CC BY 4.0
+    </p>
+
+</body>
+</html>
