@@ -12,13 +12,25 @@ This repository contains a draft exploring the structural properties of the modu
 G_p defined on Z/2^pZ. The work was produced through an iterative human-AI collaboration:
 
 - **Human contribution:** formulation of the research question, structural intuition, 
-  guidance of the exploration, verification of logical coherence at the macro level.
+  guidance of the exploration direction, and evaluation of plausibility through numerical 
+  verification (e.g., p=3 adjacency matrix powers) and consistency checks.
 - **Computational contribution:** formal derivations, LaTeX drafting, proof structuring, 
   and symbolic verification.
 
 **Important:** I do not have formal training in advanced mathematics. I cannot independently 
 verify every step of the proofs presented here. This document is offered as a **conjectural 
 draft** for expert evaluation, not as a peer-reviewed theorem.
+
+---
+
+## How this was made
+
+This draft was generated through iterative dialogue with a large language model (Claude/GPT). 
+The human author posed questions, requested formalizations, and selected coherent directions 
+from multiple AI-generated proposals. The AI handled the technical execution (proof writing, 
+LaTeX formatting, symbolic computation). The human author verified that the results were 
+numerically consistent for small cases and that the overall structure was logically sound, 
+without being able to validate each proof step independently.
 
 ---
 
